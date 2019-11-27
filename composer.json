@@ -1,7 +1,7 @@
 {
-    "name": "horde/horde",
+    "name": "ralflang/horde",
     "description": "Horde base application",
-    "type": "project",
+    "type": "horde-application",
     "homepage": "https://www.horde.org/apps/horde",
     "license": "LGPL-2",
     "authors": [
@@ -11,13 +11,13 @@
             "role": "lead"
         },
         {
-            "name": "Michael Slusarz",
-            "email": "slusarz@horde.org",
+            "name": "Michael J Rubinsky",
+            "email": "mrubinsk@horde.org",
             "role": "lead"
         },
         {
-            "name": "Michael J Rubinsky",
-            "email": "mrubinsk@horde.org",
+            "name": "Michael Slusarz",
+            "email": "slusarz@horde.org",
             "role": "lead"
         },
         {
@@ -26,75 +26,96 @@
             "role": "lead"
         }
     ],
-    "version": "6.0.0",
-    "time": "2017-11-11",
+    "version": "5.2.21",
+    "time": "2019-11-27",
     "repositories": [
         {
-            "type": "pear",
-            "url": "https://pear.horde.org"
+            "type": "composer",
+            "url": "https://horde-satis.maintaina.com"
+        },
+        {
+            "url": "https://pear.php.net",
+            "type": "pear"
         }
     ],
     "require": {
+        "horde/horde-installer-plugin": "dev-master",
         "php": "^5.3 || ^7",
-        "pear-pear.horde.org/Horde_Alarm": "^2.1",
-        "pear-pear.horde.org/Horde_Argv": "^2",
-        "pear-pear.horde.org/Horde_Auth": "^2",
-        "pear-pear.horde.org/Horde_Autoloader": "^2.1",
-        "pear-pear.horde.org/Horde_Browser": "^2",
-        "pear-pear.horde.org/Horde_Core": "^2.31",
-        "pear-pear.horde.org/Horde_Date": "^2",
-        "pear-pear.horde.org/Horde_Exception": "^2",
-        "pear-pear.horde.org/Horde_Form": "^2.0.16",
-        "pear-pear.horde.org/Horde_Group": "^2",
-        "pear-pear.horde.org/Horde_Http": "^2",
-        "pear-pear.horde.org/Horde_Image": "^2",
-        "pear-pear.horde.org/Horde_LoginTasks": "^2",
-        "pear-pear.horde.org/Horde_Mail": "^2",
-        "pear-pear.horde.org/Horde_Mime": "^2",
-        "pear-pear.horde.org/Horde_Nls": "^2",
-        "pear-pear.horde.org/Horde_Perms": "^2.1.5",
-        "pear-pear.horde.org/Horde_Prefs": "^2",
-        "pear-pear.horde.org/Horde_Rpc": "^2",
-        "pear-pear.horde.org/Horde_Serialize": "^2",
-        "pear-pear.horde.org/Horde_Support": "^2",
-        "pear-pear.horde.org/Horde_Text_Diff": "^2",
-        "pear-pear.horde.org/Horde_Token": "^2",
-        "pear-pear.horde.org/Horde_Text_Filter": "^2",
-        "pear-pear.horde.org/Horde_Tree": "^2",
-        "pear-pear.horde.org/Horde_Url": "^2",
-        "pear-pear.horde.org/Horde_Util": "^2",
-        "pear-pear.horde.org/Horde_View": "^2",
-        "pear-pear.horde.org/Horde_Vfs": "^2",
+        "horde/alarm": "dev-master",
+        "horde/argv": "dev-master",
+        "horde/auth": "dev-master",
+        "horde/autoloader": "dev-master",
+        "horde/browser": "dev-master",
+        "horde/core": "dev-master",
+        "horde/date": "dev-master",
+        "horde/exception": "dev-master",
+        "horde/form": "dev-master",
+        "horde/group": "dev-master",
+        "horde/http": "dev-master",
+        "horde/image": "dev-master",
+        "horde/logintasks": "dev-master",
+        "horde/mail": "dev-master",
+        "horde/mime": "dev-master",
+        "horde/nls": "dev-master",
+        "horde/perms": "dev-master",
+        "horde/prefs": "dev-master",
+        "horde/rpc": "dev-master",
+        "horde/serialize": "dev-master",
+        "horde/support": "dev-master",
+        "horde/text_diff": "dev-master",
+        "horde/token": "dev-master",
+        "horde/text_filter": "dev-master",
+        "horde/tree": "dev-master",
+        "horde/url": "dev-master",
+        "horde/util": "dev-master",
+        "horde/view": "dev-master",
+        "horde/vfs": "dev-master",
         "ext-filter": "*",
         "ext-gettext": "*",
         "ext-hash": "*"
     },
     "suggest": {
         "pear-pear.php.net/Net_DNS2": "*",
-        "pear-pear.horde.org/Horde_ActiveSync": "^2.16",
-        "pear-pear.horde.org/Horde_Backup": "^1",
-        "pear-pear.horde.org/Horde_Cli_Application": "^1",
-        "pear-pear.horde.org/Horde_Db": "^2",
-        "pear-pear.horde.org/Horde_Feed": "^2",
-        "pear-pear.horde.org/Horde_Oauth": "^2",
-        "pear-pear.horde.org/Horde_OpenXchange": "^1",
-        "pear-pear.horde.org/Horde_Service_Facebook": "^2",
-        "pear-pear.horde.org/Horde_Service_Twitter": "^2.1",
-        "pear-pear.horde.org/Horde_Service_Weather": "^2.4",
-        "pear-pear.horde.org/Horde_SyncMl": "^2",
+        "pear-pear.php.net/Services_Weather": "*",
+        "horde/activesync": "^2.16",
+        "horde/db": "^2",
+        "horde/feed": "^2",
+        "horde/oauth": "^2",
+        "horde/openxchange": "^1",
+        "horde/service_facebook": "^2",
+        "horde/service_twitter": "^2.1",
+        "horde/service_weather": "^2.2",
+        "horde/syncml": "^2",
         "pear-pear.php.net/Console_Getopt": "*",
         "pear-pear.php.net/Console_Table": "*",
         "pear-pear.php.net/File_Find": "*",
         "pear-pear.php.net/File_Fstab": "*",
         "ext-iconv": "*"
     },
-    "replace": {
-        "pear-pear.horde.org/horde": "6.*",
-        "pear-horde/horde": "6.*"
-    },
     "autoload": {
         "psr-0": {
             "Horde": "lib/"
         }
-    }
+    },
+    "bin": [
+        "bin/.htaccess",
+        "bin/horde-active-sessions",
+        "bin/horde-alarms",
+        "bin/horde-check-logger",
+        "bin/horde-clear-cache",
+        "bin/horde-crond",
+        "bin/horde-db-migrate",
+        "bin/horde-import-openxchange-prefs",
+        "bin/horde-import-squirrelmail-prefs",
+        "bin/horde-memcache-stats",
+        "bin/horde-pref-remove",
+        "bin/horde-queue-run-tasks",
+        "bin/horde-remove-user-data",
+        "bin/horde-run-task",
+        "bin/horde-sessions-gc",
+        "bin/horde-set-perms",
+        "bin/horde-sql-shell",
+        "bin/horde-themes",
+        "bin/horde-translation"
+    ]
 }
